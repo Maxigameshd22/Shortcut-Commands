@@ -1,4 +1,32 @@
-name: Training Plugin
+name: UsefulCommands
 version: '1.0-SNAPSHOT'
-main: net.maxigames.trainingPlugin.TrainingPlugin
+main: net.maxigames.usefulcommands.Usefulcommands
 api-version: '1.21'
+
+
+commands:
+  heal:
+    description: Heals you or another player
+    usage: /heal [player]
+    permission: heal.use
+    permission-message: You don't have permission to use this command.
+  gm1:
+    description: Set gamemode to Creative
+  gm0:
+    description: Set gamemode to Survival
+  gm2:
+    description: Set gamemode to Adventure
+  gm3:
+    description: Set gamemode to Spectator
+  supersummon:
+    description: Summons mobs with optional count. DONT SPAWN 10000 ENTITIES IT`LL CRASH EVERYTHING TRUST I TRIED
+    usage: /supersummon <entity> [amount]
+
+
+permissions:
+  heal.use:
+    description: Allows the player to use /heal
+    default: true
+  heal.others:
+    description: Allows healing others
+    default: op
